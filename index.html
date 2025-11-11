@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>마인드맵 프로필</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="sidebar">
+      <h2>나-오브젝트-키워드</h2>
+
+      <h3>테마</h3>
+      <div id="themeButtons" class="theme-buttons">
+        <div class="theme-circle" data-theme="pink" style="background:#ffeaf3;"></div>
+        <div class="theme-circle" data-theme="blue" style="background:#e0f0ff;"></div>
+        <div class="theme-circle" data-theme="green" style="background:#e8ffe8;"></div>
+        <div class="theme-circle" data-theme="dark" style="background:#222222;"></div>
+      </div>
+
+      <h3>내 소개</h3>
+      <input type="text" id="myName" placeholder="이름">
+      <textarea id="myIntro" placeholder="소개/SNS" rows="3"></textarea>
+      <input type="file" id="myPhoto" accept="image/*">
+
+      <h3>키워드/오브젝트 카드</h3>
+      <input type="text" id="objName" placeholder="키워드/오브젝트 이름">
+      <textarea id="objDesc" placeholder="설명" rows="2"></textarea>
+      <input type="file" id="objPhoto" accept="image/*">
+      <button id="createObjBtn">키워드 추가</button>
+
+      <button id="captureBtn">전체 화면 저장</button>
+    </div>
+
+    <div class="main-area" id="mainArea">
+      <canvas id="linkCanvas"></canvas>
+      <div id="centralCard" class="card central-card">
+        <img id="myPhotoPreview" src="" alt="" style="display:none;">
+        <h2 id="myNameDisplay">이름</h2>
+        <p id="myIntroDisplay">소개</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ script를 맨 아래에 둬야 버튼 인식됨 -->
+  <script src="script.js"></script>
+</body>
+
+</html>

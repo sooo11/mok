@@ -1,0 +1,108 @@
+@font-face {
+  font-family: "Jua";
+  src: url("fonts/Jua-Regular.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: "Jua", "Malgun Gothic", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 280px;
+  background-color: #fff0f6;
+  border-right: 2px solid #ffb6c1;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.sidebar h2,
+h3 {
+  color: #d6336c;
+  margin-bottom: 5px;
+}
+.sidebar input,
+.sidebar textarea,
+.sidebar button {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-family: "Jua", sans-serif;
+  box-sizing: border-box;
+}
+
+.theme-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.theme-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.main-area {
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+#linkCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.card {
+  position: absolute;
+  width: 160px;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1;
+  font-family: "Jua", sans-serif;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+.central-card {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.delete-x {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  width: 18px;
+  height: 18px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  color: white;
+}
